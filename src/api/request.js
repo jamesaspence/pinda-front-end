@@ -1,4 +1,3 @@
-'use strict';
 // @flow
 
 import request from 'request';

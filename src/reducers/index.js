@@ -1,5 +1,3 @@
-'use strict';
-
 import { ATTEMPT_LOGIN } from '../constants/action-types';
 
 export type State = {

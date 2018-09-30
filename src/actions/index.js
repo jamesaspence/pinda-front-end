@@ -1,4 +1,3 @@
-'use strict';
 // @flow
 
 import { ATTEMPT_LOGIN } from '../constants/action-types';
