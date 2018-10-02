@@ -119,6 +119,8 @@ class APIRepository {
             password: password
         });
 
+        console.log('here?');
+        console.log(request);
         return request.makeRequest();
     }
 
