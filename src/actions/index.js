@@ -7,20 +7,18 @@ export type Action = {
     +payload: any
 };
 
-export const attemptLogin: Function = (): Action => {
-    const success: boolean = Math.random() >= 0.5;
-    let error: ?string = null;
-    if (!success) {
-        error = 'Unable to do a thing';
-    }
-
-    //TODO make request to login
-    //TODO handle result
-    return {
+const setLogin = (success, error): Action => ({
         type: ATTEMPT_LOGIN,
         payload: {
             success,
             error
         }
-    };
+    });
+
+export const attemptLogin = () => {
+    return (dispatch: Function, getState: Function) => {
+        const success: boolean = !getState().login.success;
+
+        return dispatch(setLogin(success, null));
+    }
 };
